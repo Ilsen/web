@@ -1,6 +1,10 @@
 #!/bin/bash
 
 mkdir /home/box/web/etc -p
+mkdir /home/box/web/public/img/ -p
+mkdir /home/box/web/public/css
+mkdir /home/box/web/public/js
+mkdir /home/box/web/uploads
 apt-get install nginx
 apt-get install gunicorn
 rm /etc/nginx/sites-enabled/default
