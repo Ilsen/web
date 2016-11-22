@@ -18,10 +18,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^$', 'blog.views.home', name='home'),
-    url(r'^login/', include(admin.site.urls)),
+    url(r'^login/', include(admin.site.urls), name='login'),
     url(r'^question/(?P<id>[0-9]+)/$', include(admin.site.urls)),
-    url(r'^ask/', include(admin.site.urls)),
-    url(r'^popular/', include(admin.site.urls)),
-    url(r'^new/', include(admin.site.urls)),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^ask/', include(admin.site.urls), name='ask'),
+    url(r'^popular/', include(admin.site.urls), name='popular'),
+    url(r'^new/', include(admin.site.urls), name='new'),
+    url(r'^signup/', include(admin.site.urls), name='signup'),
 ]
